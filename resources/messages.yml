@@ -1,0 +1,18 @@
+# Created by Terpz710 :p
+
+# You may use "&" for color formatting
+
+# Claim message
+claim-message: "You claimed &a${amount}&f from the banknote!"
+
+# Command usage message
+command-usage-message: "&cUsage: /banknote <amount>"
+
+# Must be postive number message
+negative-number-message: "&cYou must input a postive amount!"
+
+# Not enough money message
+not-enough-money-message: "&cYou dont have enough money to create a banknote!"
+
+# Successfully created banknote message
+created-banknote-message: "You created a banknote worth &a${amount}"

@@ -1,0 +1,9 @@
+name: WavyBankNotes
+version: 1.0.0
+author: Terpz710
+api: 5.3.0
+main: wavycraft\wavybanknotes\WavyBankNotes
+
+permissions:
+  wavybanknotes.cmd:
+    default: true
