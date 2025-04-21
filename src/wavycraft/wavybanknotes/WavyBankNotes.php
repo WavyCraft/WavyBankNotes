@@ -11,6 +11,8 @@ use pocketmine\item\enchantment\Enchantment;
 
 use pocketmine\data\bedrock\EnchantmentIdMap;
 
+use wavycraft\wavybanknotes\command\BankNoteCommand;
+
 use CortexPE\Commando\PacketHooker;
 
 class WavyBankNotes extends PluginBase {
