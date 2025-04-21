@@ -21,11 +21,11 @@ final class BankNoteFactory {
     public function createBankNote(Player $player, int $amount) : Item{
         $bankNote = StringToItemParser::getInstance()->parse($this->getConfig()->get("bank_note_item"));
         $customName = $this->getConfig()->get("bank_note_name");
-        $customName = str_replace("{amount}", (string)$amount, $customName);
+        $customName = str_replace("{amount}", (string)number_format($amount), $customName);
         $bankNote->setCustomName(TextColor::colorize($customName));
         $lore = $this->getConfig()->get("bank_note_lore");
         $lore = array_map(function($line) use ($amount) {
-            return TextColor::colorize(str_replace("{amount}", (string)$amount, $line));
+            return TextColor::colorize(str_replace("{amount}", (string)number_format($amount), $line));
         }, $lore);
         $bankNote->setLore($lore);
         $bankNote->getNamedTag()->setInt("Amount", $amount);
