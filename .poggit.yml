@@ -1,0 +1,14 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/WavyCraft/WavyBankNotes
+build-by-default: true
+branches:
+- main
+projects:
+  WavyBankNotes:
+    path: ""
+    libs:
+       - src: ACM-PocketMine-MP/Commando/Commando
+         version: ^3.2.1
+       - src: Terpz710/libMessages/libMessages
+         version: ^1.0.0
+    lint: false
+...
