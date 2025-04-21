@@ -19,11 +19,12 @@ final class BankNoteFactory {
     use SingletonTrait;
 
     public function createBankNote(Player $player, int $amount) : Item{
-        $bankNote = StringToItemParser::getInstance()->parse($this->getConfig()->get("bank_note_item"));
-        $customName = $this->getConfig()->get("bank_note_name");
+        $config = WavyBankNotes::getInstance()->getConfig();
+        $bankNote = StringToItemParser::getInstance()->parse($config->get("bank_note_item"));
+        $customName = $config->get("bank_note_name");
         $customName = str_replace("{amount}", (string)number_format($amount), $customName);
         $bankNote->setCustomName(TextColor::colorize($customName));
-        $lore = $this->getConfig()->get("bank_note_lore");
+        $lore = $config->get("bank_note_lore");
         $lore = array_map(function($line) use ($amount) {
             return TextColor::colorize(str_replace("{amount}", (string)number_format($amount), $line));
         }, $lore);
