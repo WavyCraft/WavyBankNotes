@@ -11,7 +11,7 @@ use pocketmine\player\Player;
 use pocketmine\utils\Config;
 
 use wavycraft\wavybanknotes\WavyBankNotes;
-use wavycraft\wavybanknotes\item\BankNotesFactory;
+use wavycraft\wavybanknotes\item\BankNoteFactory;
 
 use wavycraft\wavyeconomy\api\WavyEconomyAPI;
 
@@ -56,7 +56,7 @@ class BankNoteCommand extends BaseCommand {
         }
 
         $api->removeMoney($sender->getName(), $amount);
-        $item = BankNotesFactory::getInstance()->getInstance()->createBankNote($sender, $amount);
+        $item = BankNoteFactory::getInstance()->createBankNote($sender, $amount);
         $sender->getInventory()->addItem($item);
         $sender->sendMessage((string) new Messages($config, "created-banknote-message", ["{amount}"], [number_format($amount)]));
     }
