@@ -11,6 +11,7 @@ use pocketmine\player\Player;
 use pocketmine\utils\Config;
 
 use wavycraft\wavybanknotes\WavyBankNotes;
+use wavycraft\wavybanknotes\item\BankNotesFactory;
 
 use wavycraft\wavyeconomy\api\WavyEconomyAPI;
 
