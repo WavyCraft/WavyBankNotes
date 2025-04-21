@@ -13,6 +13,8 @@ use pocketmine\item\Item;
 use pocketmine\item\StringToItemParser;
 use pocketmine\item\enchantment\EnchantmentInstance;
 
+use pocketmine\data\bedrock\EnchantmentIdMap;
+
 use wavycraft\wavybanknotes\WavyBankNotes;
 
 final class BankNoteFactory {
