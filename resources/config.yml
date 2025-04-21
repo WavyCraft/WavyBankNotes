@@ -1,0 +1,13 @@
+# Made by Terpz710 :p
+
+# Bank note item
+bank_note_item: "PAPER"
+# Name of the bank note item
+bank_note_name: "&r&a${amount}&f Bank Note"
+# Lore lines for the bank note item
+bank_note_lore: 
+  - ""
+  - "&r&7Value: &a${amount}"
+  - ""
+  - "&r&eRight-click to redeem"
+  - ""
