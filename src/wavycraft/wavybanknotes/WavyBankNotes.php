@@ -33,7 +33,7 @@ class WavyBankNotes extends PluginBase {
             PacketHooker::register($this);
         }
 
-        $this->getServer()->getCommandMap()->register("WavyBankNotes", new BankNotesCommand($this, "banknote", "Create a bank note"));
+        $this->getServer()->getCommandMap()->register("WavyBankNotes", new BankNoteCommand($this, "banknote", "Create a bank note"));
 
         $this->getServer()->getPluginManager()->registerEvents(new EventListener(), $this);
 
